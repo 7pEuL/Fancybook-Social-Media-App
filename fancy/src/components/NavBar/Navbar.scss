@@ -1,0 +1,122 @@
+@import "../../style.scss";
+
+.navbar {
+  @include themify($fancyColors) {
+    display: flex;
+    align-items: center;
+    // justify-content: space-between;
+    height: 50px;
+    padding: 5px 20px;
+    border-bottom: 1px solid #99ff7a2d;
+    -webkit-box-shadow: 0px 0px 15px 1px #00000017;
+    -moz-box-shadow: 0px 0px 15px 1px #00000017;
+    box-shadow: 0px 0px 15px 1px #00000017;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    color: themed("textColor");
+    background: themed("bg");
+
+    .left {
+      flex: 0.2;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 10px;
+
+      a {
+        div {
+          background: themed("bgSvg");
+        }
+      }
+
+      img {
+        width: 30px;
+        margin-left: 4px;
+        margin-bottom: 3px;
+      }
+
+      .search {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        border: 1px solid themed("searchBorder");
+        border-radius: 7px;
+        padding: 5px;
+
+        div {
+          background: themed("bgSvg");
+        }
+
+        svg {
+          color: themed("svg");
+        }
+
+        input {
+          border: none;
+          width: 12vw;
+          background-color: transparent;
+          color: themed("textColor");
+
+          &::placeholder {
+            font-size: 16px;
+            color: #d2691e70;
+          }
+
+          &:focus {
+            font-size: 16px;
+            border: 1px solid white !important;
+            padding: 7px;
+          }
+          //   @include mobile{
+          //     display: none;
+          //   }
+
+          //   @include tablet{
+          //     width: 200px;
+          //   }
+        }
+      }
+    }
+
+    .middle {
+      flex: 0.6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5vw;
+
+      div {
+        background: themed("bgSvg");
+      }
+
+      svg {
+        cursor: pointer;
+        color: themed("svg");
+      }
+    }
+
+    .right {
+      flex: 0.2;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 15px;
+
+      div {
+        background: themed("bgSvg");
+
+        nav {
+          svg {
+            color: themed("textColor");
+          }
+        }
+      }
+
+      svg {
+        cursor: pointer;
+        color: themed("svg");
+      }
+    }
+  }
+}

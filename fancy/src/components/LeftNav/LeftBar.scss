@@ -1,0 +1,81 @@
+@import "../../style.scss";
+
+.leftBar {
+  @include themify($fancyColors) {
+    flex: 2.2;
+    position: sticky;
+    top: 70px;
+    height: calc(100vh - 70px);
+    overflow: scroll;
+    background: themed("bg");
+    -webkit-box-shadow: 0px 0px 15px 1px #00000017;
+    -moz-box-shadow: 0px 0px 15px 1px #00000017;
+    box-shadow: 0px 0px 15px 1px #00000017;
+    // color: themed("textColor");
+
+    // @include mobile{
+    //   display: none;
+    // }
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    svg {
+      color: themed("svg");
+      // font-size: 30px; // fix all device
+    }
+
+    .container {
+      padding: 20px;
+
+      hr {
+        margin: 20px 0px;
+        border: none;
+        height: 0.5px;
+        background-color: themed("border");
+      }
+
+      .menu {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        span {
+          color: themed("textColorSoft");
+        }
+
+        .user {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+
+          img {
+            margin-left: -10px;
+            width: 30px;
+            height: 30px;
+            border-radius: 100%;
+            object-fit: cover;
+          }
+
+          span {
+            margin-left: -15px;
+            font-size: 17px;
+            color: themed("textColor");
+          }
+        }
+
+        .item {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+
+          span {
+            font-size: 15px;
+            color: themed("textColor");
+          }
+        }
+      }
+    }
+  }
+}

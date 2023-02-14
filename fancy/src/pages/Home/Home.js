@@ -1,9 +1,15 @@
-import React from 'react'
+import Posts from "../../components/Posts/Posts";
+import Stories from "../../components/Stories/Stories";
+
+import "./Home.scss";
 
 const Home = () => {
   return (
-    <div>Home</div>
-  )
-}
+    <div className="home">
+      <Stories />
+      <Posts />
+    </div>
+  );
+};
 
-export default Home
+export default Home;
