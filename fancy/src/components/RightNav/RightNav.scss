@@ -4,17 +4,20 @@
   @include themify($fancyColors) {
     flex: 3;
     position: sticky;
-    top: 70px;
-    height: calc(100vh - 70px);
+    top: 61px;
+    height: calc(100vh - 61px);
     overflow: scroll;
     background-color: themed("bgSoft");
 
-    // @include mobile{
-    //   display: none;
-    // }
-    // @include tablet{
-    //   display: none;
-    // }
+    @include mobile {
+      display: none;
+    }
+    @include tablet {
+      display: none;
+    }
+    @include laptop {
+      flex: 3.3;
+    }
 
     &::-webkit-scrollbar {
       display: none;
@@ -23,6 +26,10 @@
     .container {
       padding: 20px;
 
+      @include laptop {
+        padding: 10px;
+      }
+
       .item {
         -webkit-box-shadow: 0px 0px 15px 1px #00000017;
         -moz-box-shadow: 0px 0px 15px 1px #00000017;
@@ -30,6 +37,12 @@
         padding: 20px;
         margin-bottom: 20px;
         background: themed("bg");
+
+        &:first-child {
+          @include laptop {
+            padding: 13px;
+          }
+        }
 
         span {
           color: themed("textColorSoft");
@@ -46,13 +59,11 @@
             align-items: center;
             gap: 10px;
             position: relative;
+            font-size: 2px;
 
-            //   img {
-            //     width: 40px;
-            //     height: 40px;
-            //     border-radius: 50%;
-            //     object-fit: cover;
-            //   }
+            @include laptop {
+              // gap: 7px;
+            }
 
             .online {
               width: 12px;
@@ -80,12 +91,20 @@
             font-size: 11px;
             font-weight: 500;
             color: themed("textColor");
+
+            @include laptop {
+              font-size: 8px;
+            }
           }
 
           .buttons {
             display: flex;
             align-items: center;
             gap: 10px;
+
+            @include laptop {
+              gap: 3px;
+            }
 
             button {
               border: none;
@@ -95,6 +114,10 @@
               padding-right: 7px;
               color: white;
               cursor: pointer;
+
+              @include laptop {
+                font-size: 11px;
+              }
 
               &:first-child {
                 background: #558ff3;

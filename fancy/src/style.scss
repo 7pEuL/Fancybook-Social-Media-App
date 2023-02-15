@@ -6,9 +6,12 @@ $fancyColors: (
     bgSoft: #f5f5f5,
     logo: chocolate,
     bgLogo: limegreen,
+    button: #ff6a00,
     svg: #ff6a00,
     bgSvg: #8ff0ff30,
-    border: lightgray,
+    border: #acff2f70,
+    nav: #acff2f,
+    proNav: skyblue,
     searchBorder: greenyellow,
     grayDay: #b8b6b6,
   ),
@@ -18,10 +21,13 @@ $fancyColors: (
     bg: #222,
     bgSoft: #333,
     logo: white,
+    button: #0e990a,
     svg: #fff,
     bgSvg: #333,
-    border: #444,
-    searchBorder: #777,
+    border: #b5c5065b,
+    nav: #befd5f,
+    proNav: rgb(0, 183, 255),
+    searchBorder: #b5c5065b,
     grayDay: #898989,
   ),
 );
@@ -49,13 +55,19 @@ $fancyColors: (
   @return map-get($theme-map, $key);
 }
 
-// @mixin mobile {
-//   @media (max-width: 480px) {
-//     @content;
-//   }
-// }
-// @mixin tablet {
-//   @media (max-width: 960px) {
-//     @content;
-//   }
-// }
+@mixin mobile {
+  @media (max-width: 480px) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (max-width: 960px) {
+    @content;
+  }
+}
+@mixin laptop {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+

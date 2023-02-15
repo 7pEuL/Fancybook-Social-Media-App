@@ -74,7 +74,7 @@ const Navbar = () => {
           <NotificationsIcon />
         </Avatar>
 
-        <Avatar>
+        <Avatar className="flexPhone">
           <nav>
             {darkMode ? (
               <LightModeIcon onClick={toggle} />

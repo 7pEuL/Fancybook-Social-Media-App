@@ -5,9 +5,15 @@
     background-color: themed("bgSoft");
 
     .bgImage {
+      background-color: themed("bgSoft");
       width: 100%;
       height: 300px;
       position: relative;
+
+      @include mobile {
+        width: 100vw;
+        height: 150px;
+      }
 
       .cover {
         width: 100%;
@@ -21,104 +27,244 @@
         border-radius: 50%;
         object-fit: cover;
         position: absolute;
-        left: 3vw;
+        left: 2vw;
         margin: auto;
         top: 200px;
         border: 3px solid white;
+
+        @include tablet {
+          width: 150px;
+          height: 150px;
+          left: 200px;
+          top: 220px;
+        }
+
+        @include mobile {
+          width: 100px;
+          height: 100px;
+          left: 2vw;
+          top: 100px;
+        }
       }
-    }
-    .profileContainer {
-      padding: 20px 70px;
 
-    //   @include mobile{
-    //     padding: 10px;
-    //   }
-
-    //   @include tablet{
-    //     padding: 20px;
-    //   }
-
-      .uInfo {
-        height: 180px;
-        -webkit-box-shadow: 0px 0px 25px -10px #00000061;
-        -moz-box-shadow: 0px 0px 25px -10px #00000061;
-        box-shadow: 0px 0px 25px -10px #00000061;
+      .userInfo {
+        height: 110px;
+        border-bottom: 1px solid themed("border");
+        // -webkit-box-shadow: 0px 0px 25px -10px #00000061;
+        //   -moz-box-shadow: 0px 0px 25px -10px #00000061;
+        //   box-shadow: 0px 0px 25px -10px #00000061;
         border-radius: 20px;
         background-color: themed("bg");
         color: themed("textColor");
-        padding: 50px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        margin: 10px;
         margin-bottom: 20px;
 
-        // @include mobile{
-        //   flex-direction: column;
-        //   height: 30vh;
-        //   padding: 20px;
-        //   margin-top: 100px;
-        // }
-
-        .left {
-        //   flex: 1;
-        //   display: flex;
-        //   gap: 10px;
-
-        //   @include tablet{
-        //     flex-wrap: wrap;
-        //   }
-
-          a{
-            // color: themed("textColorSoft");
-          }
+        @include laptop {
+          height: 130px;
         }
 
-        .left {
-        //   flex: 1;
-        //   display: flex;
-        //   flex-direction: column;
-        //   align-items: center;
-        //   gap: 10px;
+        @include tablet {
+          height: 190px;
+        }
 
-          span {
-            // font-size: 30px;
-            // font-weight: 500;
+        @include mobile {
+          height: 130px;
+        }
+
+        .profileContainer {
+          margin-left: 5px;
+          margin-right: 5px;
+          margin-bottom: 70px;
+          display: flex;
+          flex-direction: row;
+
+          @include tablet {
+            flex-direction: column;
+            align-items: center;
           }
 
-          .center {
-            // width: 100%;
-            // display: flex;
-            // align-items: center;
-            // justify-content: space-around;
+          @include mobile {
+            flex-direction: column;
+            align-items: flex-start;
+          }
 
-            .item {
-              display: flex;
-              align-items: center;
-              gap: 5px;
-              color: themed("textColorSoft");
+          @include laptop {
+            flex-direction: column;
+            align-items: center;
+          }
 
-              span {
-                font-size: 12px;
+          .empty {
+            width: 220px;
+            // flex: 1;
+
+            @include mobile {
+              display: none;
+            }
+          }
+
+          .profileName {
+            flex: 2;
+            margin-top: 27px;
+
+            @include laptop {
+              margin-left: 130px;
+            }
+
+            @include tablet {
+              margin-top: 40px;
+              margin-left: 0px;
+            }
+
+            @include mobile {
+              margin-top: 7px;
+            }
+
+            span {
+              font-size: 30px;
+              font-weight: 700;
+              color: themed("logo");
+
+              @include tablet {
+                font-size: 35px;
+              }
+
+              @include mobile {
+                font-size: 27px;
               }
             }
           }
-          button {
-            border: none;
-            background-color: #5271ff;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
+
+          .button {
+            flex: 1;
+            height: 35px;
+            display: flex;
+            gap: 7px;
+            align-self: center;
+            margin-top: 30px;
+
+            @include laptop {
+              gap: 20px;
+              margin-top: 15px;
+              align-self: center;
+              margin-left: 120px;
+            }
+
+            @include tablet {
+              gap: 20px;
+              margin-top: 15px;
+              align-self: center;
+              margin-left: 5px;
+            }
+
+            @include mobile {
+              gap: 20px;
+              margin-top: 15px;
+              align-self: center;
+              margin-left: 5px;
+            }
+
+            button:first-child {
+              background: themed("button");
+              color: themed("textColor");
+              // margin-top: -1px;
+            }
+
+            button:last-child {
+              background: themed("bgLogo");
+              color: themed("bg");
+              // margin-top: -1px;
+            }
+          }
+
+          @include mobile {
+            padding: 10px;
+          }
+
+          @include tablet {
+            padding: 20px;
+          }
+
+          // @include mobile {
+          //   flex-direction: column;
+          //   height: 30vh;
+          //   padding: 20px;
+          //   margin-top: 100px;
+          // }
+
+          @include tablet {
+            flex-wrap: wrap;
           }
         }
+      }
+    }
 
-        .right {
-          flex: 1;
+    .profileNav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 30px;
+      border-right: 3px solid themed("bgLogo");
+      border-left: 3px solid themed("bgLogo");
+      border-bottom: 3px solid themed("proNav");
+      border-radius: 30px;
+      padding: 10px;
+
+      @include laptop {
+        font-size: 12px;
+        margin: -40px 30px;
+      }
+
+      @include mobile {
+        display: none;
+      }
+
+      @include tablet {
+        margin: -37px 30px;
+      }
+
+      .left {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+
+        span {
+          color: themed("button");
+          // border-bottom: 1px solid themed("border");
+        }
+
+        span:hover {
+          scale: 1.03;
+          cursor: pointer;
+          color: themed("proNav");
+          border-bottom: 3px solid themed("nav");
+        }
+
+        span:last-child {
           display: flex;
           align-items: center;
-          justify-content: flex-end;
-          gap: 10px;
+
+          svg {
+            margin-top: 3px;
+            font-size: 14px;
+          }
         }
+      }
+    }
+
+    .posts {
+      margin: 110px 30px;
+
+      @include laptop {
+        margin: 120px 5px;
+      }
+
+      @include tablet {
+        margin: 150px 3px;
+      }
+
+      @include mobile {
+        margin: 80px 3px;
       }
     }
   }

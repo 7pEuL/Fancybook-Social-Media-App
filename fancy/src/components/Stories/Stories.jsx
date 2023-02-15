@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../context/authContext";
 // import { useQuery } from "@tanstack/react-query";
 // import { makeRequest } from "../../axios";
-import { Avatar, Button, IconButton } from "@mui/material";
+import { Avatar, Button, Fab, IconButton } from "@mui/material";
 import AddIcon from "@mui/icons-material/Add";
 
 import images from "../../images";
@@ -47,6 +47,9 @@ const Stories = () => {
         <img src={currentUser.profilePic} alt="" />
         <span>{currentUser.name}</span>
         <button>+</button>
+        {/* <Fab color="primary" aria-label="add">
+          <AddIcon />
+        </Fab> */}
         {/* <IconButton aria-label="" size="small">
           <AddIcon fontSize="small" />
         </IconButton> */}

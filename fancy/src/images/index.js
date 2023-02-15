@@ -11,6 +11,7 @@ import Fantail from "./Fantail.jpg";
 
 import Story1 from "./Story1.jpg";
 import Story2 from "./Story2.jpg";
+import Story3 from "./Story3.jpg";
 
 const images = {
   FancyLogo: FancyLogo,
@@ -26,6 +27,7 @@ const images = {
 
   Story1: Story1,
   Story2: Story2,
+  Story3: Story3,
 };
 
 export default images;

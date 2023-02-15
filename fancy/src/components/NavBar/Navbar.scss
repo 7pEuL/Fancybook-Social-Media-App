@@ -61,6 +61,10 @@
           &::placeholder {
             font-size: 16px;
             color: #d2691e70;
+
+            @include tablet {
+              font-size: 12px;
+            }
           }
 
           &:focus {
@@ -68,13 +72,18 @@
             border: 1px solid white !important;
             padding: 7px;
           }
-          //   @include mobile{
-          //     display: none;
-          //   }
 
-          //   @include tablet{
-          //     width: 200px;
-          //   }
+          @include laptop {
+            width: 11vw;
+          }
+
+          @include mobile {
+            // width: 12px;
+          }
+
+          @include tablet {
+            width: 80px;
+          }
         }
       }
     }
@@ -88,11 +97,27 @@
 
       div {
         background: themed("bgSvg");
+
+        @include mobile {
+          display: none;
+        }
+
+        // &:first-child {
+        //   @include mobile {
+        //     display: flex;
+        //     margin-left: 15px;
+        //   }
+        // }
       }
 
       svg {
         cursor: pointer;
         color: themed("svg");
+      }
+
+      @include tablet {
+        gap: 1vw;
+        // width: 200px;
       }
     }
 
@@ -111,12 +136,47 @@
             color: themed("textColor");
           }
         }
+
+        @include mobile {
+          display: none;
+        }
+
+        &:last-child,
+        &:first-child {
+          @include mobile {
+            display: flex;
+          }
+        }
+
+        &:first-child {
+          @include mobile {
+            margin-right: 7px;
+          }
+        }
       }
 
       svg {
         cursor: pointer;
         color: themed("svg");
       }
+
+      .flexPhone {
+        @include mobile {
+          display: flex;
+          margin-right: 7px;
+        }
+      }
+
+      @include mobile {
+        flex: 2;
+      }
+
+      @include tablet {
+        gap: 1vw;
+      }
+    }
+    @include tablet {
+      // padding: 5px 50px;
     }
   }
 }
