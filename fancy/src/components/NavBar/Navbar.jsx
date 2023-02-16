@@ -1,7 +1,6 @@
 import { useContext } from "react";
 import HomeIcon from "@mui/icons-material/Home";
 import OndemandVideoIcon from "@mui/icons-material/OndemandVideo";
-import BlurOnRoundedIcon from "@mui/icons-material/BlurOnRounded";
 import EmailIcon from "@mui/icons-material/Email";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import SearchIcon from "@mui/icons-material/Search";

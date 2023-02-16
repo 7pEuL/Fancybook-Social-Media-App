@@ -2,8 +2,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../context/authContext";
 // import { useQuery } from "@tanstack/react-query";
 // import { makeRequest } from "../../axios";
-import { Avatar, Button, Fab, IconButton } from "@mui/material";
-import AddIcon from "@mui/icons-material/Add";
+import { Avatar } from "@mui/material";
 
 import images from "../../images";
 import "./Stories.scss";

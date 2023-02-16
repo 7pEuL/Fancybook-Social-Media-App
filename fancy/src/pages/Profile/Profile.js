@@ -1,21 +1,14 @@
-import FacebookTwoToneIcon from "@mui/icons-material/FacebookTwoTone";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import PinterestIcon from "@mui/icons-material/Pinterest";
-import TwitterIcon from "@mui/icons-material/Twitter";
-import PlaceIcon from "@mui/icons-material/Place";
-import LanguageIcon from "@mui/icons-material/Language";
-import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
-import MoreVertIcon from "@mui/icons-material/MoreVert";
 import PersonIcon from "@mui/icons-material/Person";
 import MapsUgcIcon from "@mui/icons-material/MapsUgc";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
+import PlaceIcon from "@mui/icons-material/Place";
+import LanguageIcon from "@mui/icons-material/Language";
 
 // import Posts from "../../components/posts/Posts";
 import "./Profile.scss";
 import images from "../../images";
-import { Button } from "@mui/material";
+import { Avatar, Button } from "@mui/material";
 import Posts from "../../components/Posts/Posts";
 
 const Profile = () => {
@@ -32,6 +25,16 @@ const Profile = () => {
 
               <div className="profileName">
                 <span>White Diamond</span>
+                <div className="info">
+                  <div className="item">
+                    <PlaceIcon /> USA
+                    {/* <span>{data.city}</span> */}
+                  </div>
+                  <div className="item">
+                    <LanguageIcon /> fancybook.com
+                    {/* <span>{data.website}</span> */}
+                  </div>
+                </div>
               </div>
 
               <div className="button">
