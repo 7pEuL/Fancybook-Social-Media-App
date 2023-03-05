@@ -71,6 +71,10 @@ function App() {
       path: "/register",
       element: <Register />,
     },
+    {
+      path: "/signup",
+      element: <Register />,
+    },
   ]);
 
   return (
