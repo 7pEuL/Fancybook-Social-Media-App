@@ -5,6 +5,7 @@ import {
   Outlet,
   Navigate,
 } from "react-router-dom";
+
 import Navbar from "./components/NavBar/Navbar";
 import RightNav from "./components/RightNav/RightNav";
 import LeftNav from "./components/LeftNav/LeftNav";
@@ -69,10 +70,6 @@ function App() {
     },
     {
       path: "/register",
-      element: <Register />,
-    },
-    {
-      path: "/signup",
       element: <Register />,
     },
   ]);
