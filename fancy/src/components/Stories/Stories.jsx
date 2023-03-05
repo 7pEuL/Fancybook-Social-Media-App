@@ -1,13 +1,10 @@
 import { useContext } from "react";
 import { AuthContext } from "../../context/authContext";
-// import { useQuery } from "@tanstack/react-query";
-// import { makeRequest } from "../../axios";
 import { Avatar } from "@mui/material";
 
 import images from "../../images";
 import "./Stories.scss";
 
-// Dame Data
 const stories = [
   {
     id: 1,
@@ -41,8 +38,6 @@ const Stories = () => {
   return (
     <div className="stories">
       <div className="story">
-        {/* <img src={"/upload/" + currentUser.profilePic} alt="" /> */}
-
         <img src={currentUser.profilePic} alt="" />
         <span>{currentUser.name}</span>
         <button>+</button>

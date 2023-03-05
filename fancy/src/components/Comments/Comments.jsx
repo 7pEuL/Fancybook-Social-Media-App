@@ -7,7 +7,6 @@ import "./Comments.scss";
 const Comments = () => {
   const { currentUser } = useContext(AuthContext);
 
-  // Dame Data
   const comments = [
     {
       id: 1,

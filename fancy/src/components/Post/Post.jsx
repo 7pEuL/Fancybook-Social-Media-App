@@ -12,7 +12,6 @@ import "./Post.scss";
 const Post = ({ post }) => {
   const [commentOpen, setCommentOpen] = useState(false);
 
-  // Temporary
   const liked = true;
 
   return (
@@ -20,7 +19,9 @@ const Post = ({ post }) => {
       <div className="container">
         <div className="user">
           <div className="userInfo">
-            <img src={post.profilePic} alt="" />
+            <Link to={`/profile/${post.userId}`}>
+              <img src={post.profilePic} alt="" />
+            </Link>
             <div className="details">
               <Link
                 to={`/profile/${post.userId}`}
@@ -40,7 +41,7 @@ const Post = ({ post }) => {
           <img src={post.img} alt="" />
         </div>
         <div className="info">
-          <div className="item">
+          <div className="item heart">
             {liked ? <FavoriteOutlinedIcon /> : <FavoriteBorderOutlinedIcon />}
             12 Likes
           </div>

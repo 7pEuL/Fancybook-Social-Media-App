@@ -3,7 +3,6 @@ import Post from "../Post/Post";
 import "./Posts.scss";
 
 const Posts = () => {
-  // Dame Data
   const posts = [
     {
       id: 1,
@@ -22,11 +21,19 @@ const Posts = () => {
       desc: "The Bokhara Trumpeter is a breed of fancy pigeon developed over many years of selective breeding.",
     },
     {
-      id: 3,
+      id: 4,
       profilePic: images.Fantail,
-      name: "Jane Doe",
-      userId: 3,
+      name: "Diamond Fantail",
+      userId: 4,
       desc: "The Fantail is a popular breed of fancy pigeon. It is characterised by a fan-shaped tail composed of 30 to 40 feathers, abnormally more than most members of the dove and pigeon family, which usually have 12 to 14 tail feathers. The breed is thought to have originated in Pakistan, India, China, Japan or Spain.",
+    },
+    {
+      id: 3,
+      profilePic: images.UserFour,
+      name: "Almond Bokhara",
+      img: images.Diamond,
+      userId: 3,
+      desc: "The Bokhara Trumpeter is a breed of fancy pigeon developed over many years of selective breeding.",
     },
   ];
 
