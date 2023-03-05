@@ -8,7 +8,7 @@ import LanguageIcon from "@mui/icons-material/Language";
 // import Posts from "../../components/posts/Posts";
 import "./Profile.scss";
 import images from "../../images";
-import { Avatar, Button } from "@mui/material";
+import { Button } from "@mui/material";
 import Posts from "../../components/Posts/Posts";
 
 const Profile = () => {

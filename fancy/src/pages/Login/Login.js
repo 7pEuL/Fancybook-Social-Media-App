@@ -1,23 +1,50 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/authContext";
+// import {
+//   signInWithEmailAndPassword,
+//   createUserWithEmailAndPassword,
+// } from "firebase/auth";
+// import { auth } from "../../Firebase";
+// import { useStateValue } from "../../Provider/StateProvider";
 
 import images from "../../images";
 import "./Login.scss";
 
 const Login = () => {
   const { login } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   const handleLogin = async (e) => {
+    e.preventDefault();
+    navigate("/");
     login();
-    // e.preventDefault();
-    // try {
-    //   await login(inputs);
-    //   navigate("/");
-    // } catch (err) {
-    //   setErr(err.response.data);
-    // }
+    //   // try {
+    //   //   await login(inputs);
+    //   //   navigate("/");
+    //   // } catch (err) {
+    //   //   setErr(err.response.data);
+    //   // }
   };
+
+  // const [{ user }, dispatch] = useStateValue();
+  // const [email, setEmail] = useState("");
+  // const [password, setPassword] = useState("");
+
+  // const handleLogin = async (e) => {
+  //   e.preventDefault();
+
+  //   signInWithEmailAndPassword(auth, email, password)
+  //     .then((useCredential) => {
+  //       if (useCredential) {
+  //         dispatch({
+  //           type: "EMPTY_CART",
+  //         });
+  //         navigate("/");
+  //       }
+  //     })
+  //     .catch((error) => alert(error.message));
+  // };
 
   return (
     <div className="login">
