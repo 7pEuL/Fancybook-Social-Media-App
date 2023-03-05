@@ -1,3 +1,5 @@
+@import "../../style.scss";
+
 .login {
   display: flex;
   justify-content: center;
@@ -8,19 +10,34 @@
   background-size: cover;
   height: 100vh;
 
+  @include mobile {
+    // height: 100%;
+  }
+
   .card {
     display: flex;
     justify-content: center;
     width: 50%;
-    background: linear-gradient(
-      100deg,
-      rgba(172, 255, 47, 0.279),
-      rgba(238, 130, 238, 0.409)
-    );
+    background: linear-gradient(100deg, #acff2f47, #ee82ee68);
     border-top-left-radius: 100px;
     border-bottom-right-radius: 100px;
     min-height: 600px;
     overflow: hidden;
+
+    @include laptop {
+      width: 80%;
+    }
+
+    @include tablet {
+      margin: 20px;
+      width: 80%;
+    }
+
+    @include mobile {
+      margin: 20px;
+      flex-direction: column;
+      width: 90%;
+    }
 
     .left {
       flex: 1;
@@ -31,13 +48,27 @@
       color: white;
       text-shadow: 1px 1px 1px chocolate;
 
+      @include mobile {
+        gap: 0px;
+        padding: 0px 20px 0;
+      }
+
       img {
         width: 100%;
         margin-top: 30px;
+
+        @include mobile {
+          width: 100px;
+          align-self: center;
+        }
       }
 
       span {
         font-size: 14px;
+
+        @include mobile {
+          margin-bottom: 3px;
+        }
       }
 
       button {
@@ -55,6 +86,11 @@
         margin-top: -27px;
         margin-left: 3px;
         text-shadow: 1px 1px 1px black;
+
+        @include mobile {
+          margin-top: 3px;
+        }
+
         b {
           cursor: pointer;
         }
@@ -71,6 +107,12 @@
       gap: 5px;
       color: white;
       text-shadow: 1px 1px 1px chocolate;
+
+      @include mobile {
+        margin-top: 7px;
+        gap: 10px;
+        padding: 0 20px 20px;
+      }
 
       form {
         display: flex;

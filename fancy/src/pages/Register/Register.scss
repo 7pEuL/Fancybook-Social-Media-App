@@ -1,3 +1,5 @@
+@import "../../style.scss";
+
 .register {
   display: flex;
   justify-content: center;
@@ -22,6 +24,21 @@
     border-bottom-left-radius: 100px;
     min-height: 600px;
     overflow: hidden;
+    
+    @include laptop {
+      width: 80%;
+    }
+
+    @include tablet {
+      margin: 20px;
+      width: 80%;
+    }
+
+    @include mobile {
+      margin: 20px;
+      flex-direction: column-reverse;
+      width: 90%;
+    }
 
     .left {
       flex: 1;
@@ -33,13 +50,30 @@
       color: white;
       text-shadow: 1px 1px 1px chocolate;
 
+      @include mobile {
+        margin-top: -70px;
+        margin-left: 40px;
+        gap: 0px;
+        padding: 0px 20px 0px 0px;
+      }
+
       img {
         width: 100%;
         margin-top: 30px;
+
+        @include mobile {
+          width: 70px;
+          align-self: center;
+          margin-top: 0;
+        }
       }
 
       span {
         font-size: 14px;
+
+        @include mobile {
+          margin-bottom: 3px;
+        }
       }
 
       button {
@@ -58,6 +92,7 @@
         margin-top: -27px;
         margin-left: 3px;
         text-shadow: 1px 1px 1px black;
+
         b {
           cursor: pointer;
         }
@@ -74,10 +109,27 @@
       color: white;
       text-shadow: 1px 1px 1px chocolate;
 
+      @include mobile {
+        margin-top: 0px;
+        gap: 0px;
+        padding: 0 30px 0px 30px;
+      }
+
+      h1 {
+        @include mobile {
+          font-size: 23px;
+          margin-left: 3px;
+        }
+      }
+
       form {
         display: flex;
         flex-direction: column;
         gap: 30px;
+
+        @include mobile {
+          gap: 13px;
+        }
 
         input {
           border: none;
@@ -86,6 +138,11 @@
           border-bottom: 1px solid greenyellow;
           padding: 13px 10px;
           border-radius: 10px;
+
+          
+        @include mobile {
+          padding: 10px 10px;
+        }
         }
 
         input::placeholder {
@@ -103,6 +160,11 @@
           color: rgb(145, 62, 2);
           font-weight: bold;
           cursor: pointer;
+
+          @include mobile {
+          font-size: 13px;
+          width: 70px;
+        }
         }
 
         h5 {
